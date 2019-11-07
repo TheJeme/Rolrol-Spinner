@@ -1,0 +1,248 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://frostgiant.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Button.gd" type="Script" id=2]
+[ext_resource path="res://Label.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/spinner1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/question.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 126
+font_data = ExtResource( 1 )
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends ReferenceRect
+
+func _ready():
+	pass
+
+
+func _on_Button_pressed():
+	pass # Replace with function body.
+
+
+func _on_Button2_pressed():
+	pass # Replace with function body.
+
+
+func _on_Button3_pressed():
+	pass # Replace with function body.
+
+
+func _on_Button4_pressed():
+	pass # Replace with function body.
+"
+
+[node name="Interface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TopUI" type="ColorRect" parent="."]
+margin_right = 1080.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 740, 190 )
+color = Color( 0.0745098, 0.54902, 0.933333, 1 )
+
+[node name="Label" type="Label" parent="TopUI"]
+margin_right = 1080.0
+margin_bottom = 200.0
+custom_fonts/font = SubResource( 1 )
+text = "ROLROL SPINNER"
+align = 1
+valign = 1
+
+[node name="SecretButton" type="Button" parent="TopUI"]
+margin_left = 80.0
+margin_right = 510.0
+margin_bottom = 200.0
+flat = true
+
+[node name="SpinnerButton" type="Button" parent="TopUI"]
+margin_left = 520.0
+margin_right = 970.0
+margin_bottom = 200.0
+flat = true
+
+[node name="BottomUI" type="ColorRect" parent="."]
+margin_top = 1720.0
+margin_right = 1080.0
+margin_bottom = 1920.0
+rect_pivot_offset = Vector2( 740, 190 )
+color = Color( 0.0745098, 0.54902, 0.933333, 1 )
+
+[node name="Button" type="Button" parent="BottomUI"]
+margin_left = 880.0
+margin_right = 1080.0
+margin_bottom = 200.0
+flat = true
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="BottomUI/Button"]
+margin_right = 200.0
+margin_bottom = 200.0
+custom_fonts/font = SubResource( 2 )
+text = "X22"
+valign = 1
+script = ExtResource( 3 )
+
+[node name="Spinners" type="ReferenceRect" parent="BottomUI"]
+editor/display_folded = true
+margin_right = 840.0
+margin_bottom = 200.0
+border_color = Color( 0, 0, 0, 0 )
+script = SubResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="BottomUI/Spinners"]
+margin_right = 200.0
+margin_bottom = 200.0
+color = Color( 0.372549, 0.372549, 0.372549, 1 )
+
+[node name="Button1" type="Button" parent="BottomUI/Spinners/ColorRect"]
+margin_right = 200.0
+margin_bottom = 200.0
+flat = true
+
+[node name="Spinner1" type="TextureRect" parent="BottomUI/Spinners/ColorRect/Button1"]
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="ColorRect2" type="ColorRect" parent="BottomUI/Spinners"]
+margin_left = 210.0
+margin_right = 410.0
+margin_bottom = 200.0
+color = Color( 0.372549, 0.372549, 0.372549, 1 )
+
+[node name="Button2" type="Button" parent="BottomUI/Spinners/ColorRect2"]
+margin_right = 200.0
+margin_bottom = 200.0
+flat = true
+
+[node name="Spinner2" type="TextureRect" parent="BottomUI/Spinners/ColorRect2/Button2"]
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="ColorRect3" type="ColorRect" parent="BottomUI/Spinners"]
+margin_left = 420.0
+margin_right = 620.0
+margin_bottom = 200.0
+color = Color( 0.372549, 0.372549, 0.372549, 1 )
+
+[node name="Button3" type="Button" parent="BottomUI/Spinners/ColorRect3"]
+margin_right = 200.0
+margin_bottom = 200.0
+flat = true
+
+[node name="Spinner3" type="TextureRect" parent="BottomUI/Spinners/ColorRect3/Button3"]
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="ColorRect4" type="ColorRect" parent="BottomUI/Spinners"]
+margin_left = 630.0
+margin_right = 830.0
+margin_bottom = 200.0
+color = Color( 0.372549, 0.372549, 0.372549, 1 )
+
+[node name="Button4" type="Button" parent="BottomUI/Spinners/ColorRect4"]
+margin_right = 200.0
+margin_bottom = 200.0
+flat = true
+
+[node name="Spinner4" type="TextureRect" parent="BottomUI/Spinners/ColorRect4/Button4"]
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Spinners2" type="ReferenceRect" parent="BottomUI"]
+margin_right = 840.0
+margin_bottom = 200.0
+border_color = Color( 0, 0, 0, 0 )
+script = SubResource( 3 )
+
+[node name="ColorRect1" type="ColorRect" parent="BottomUI/Spinners2"]
+margin_right = 200.0
+margin_bottom = 200.0
+color = Color( 0.372549, 0.372549, 0.372549, 1 )
+
+[node name="Button1" type="Button" parent="BottomUI/Spinners2/ColorRect1"]
+margin_right = 200.0
+margin_bottom = 200.0
+flat = true
+
+[node name="Spinner1" type="TextureRect" parent="BottomUI/Spinners2/ColorRect1/Button1"]
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="ColorRect2" type="ColorRect" parent="BottomUI/Spinners2"]
+margin_left = 210.0
+margin_right = 410.0
+margin_bottom = 200.0
+color = Color( 0.372549, 0.372549, 0.372549, 1 )
+
+[node name="Button2" type="Button" parent="BottomUI/Spinners2/ColorRect2"]
+margin_right = 200.0
+margin_bottom = 200.0
+flat = true
+
+[node name="Spinner2" type="TextureRect" parent="BottomUI/Spinners2/ColorRect2/Button2"]
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="ColorRect3" type="ColorRect" parent="BottomUI/Spinners2"]
+margin_left = 420.0
+margin_right = 620.0
+margin_bottom = 200.0
+color = Color( 0.372549, 0.372549, 0.372549, 1 )
+
+[node name="Button3" type="Button" parent="BottomUI/Spinners2/ColorRect3"]
+margin_right = 200.0
+margin_bottom = 200.0
+flat = true
+
+[node name="Spinner3" type="TextureRect" parent="BottomUI/Spinners2/ColorRect3/Button3"]
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="ColorRect4" type="ColorRect" parent="BottomUI/Spinners2"]
+margin_left = 630.0
+margin_right = 830.0
+margin_bottom = 200.0
+color = Color( 0.372549, 0.372549, 0.372549, 1 )
+
+[node name="Button4" type="Button" parent="BottomUI/Spinners2/ColorRect4"]
+margin_right = 200.0
+margin_bottom = 200.0
+flat = true
+
+[node name="Spinner4" type="TextureRect" parent="BottomUI/Spinners2/ColorRect4/Button4"]
+margin_right = 200.0
+margin_bottom = 200.0
+texture = ExtResource( 5 )
+expand = true
+[connection signal="pressed" from="TopUI/SecretButton" to="BottomUI/Button" method="_on_ButtonUI_pressed"]
+[connection signal="pressed" from="TopUI/SpinnerButton" to="BottomUI/Button" method="_on_ButtonSpinner_pressed"]
+[connection signal="pressed" from="BottomUI/Button" to="BottomUI/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="BottomUI/Spinners/ColorRect/Button1" to="BottomUI/Button" method="_on_Button1_pressed"]
+[connection signal="pressed" from="BottomUI/Spinners/ColorRect2/Button2" to="BottomUI/Button" method="_on_Button2_pressed"]
+[connection signal="pressed" from="BottomUI/Spinners/ColorRect3/Button3" to="BottomUI/Button" method="_on_Button3_pressed"]
+[connection signal="pressed" from="BottomUI/Spinners/ColorRect4/Button4" to="BottomUI/Button" method="_on_Button4_pressed"]
+[connection signal="pressed" from="BottomUI/Spinners2/ColorRect1/Button1" to="BottomUI/Button" method="_on_Button5_pressed"]
+[connection signal="pressed" from="BottomUI/Spinners2/ColorRect2/Button2" to="BottomUI/Button" method="_on_Button6_pressed"]
+[connection signal="pressed" from="BottomUI/Spinners2/ColorRect3/Button3" to="BottomUI/Button" method="_on_Button7_pressed"]
+[connection signal="pressed" from="BottomUI/Spinners2/ColorRect4/Button4" to="BottomUI/Button" method="_on_Button8_pressed"]

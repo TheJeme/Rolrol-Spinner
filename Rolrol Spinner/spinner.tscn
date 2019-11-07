@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://spinner.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/spinner1.png" type="Texture" id=2]
+
+[node name="Spinner" type="KinematicBody2D"]
+position = Vector2( 540, 960 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -40, -39.9999 )
+scale = Vector2( 3.5, 3.5 )
+texture = ExtResource( 2 )
+offset = Vector2( 13.3333, 13.3333 )

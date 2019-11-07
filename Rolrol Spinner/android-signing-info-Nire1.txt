@@ -1,0 +1,4 @@
+Keystore: android-Nire1.keystore
+Keystore password: CJgPAZWyj94ziSU5
+Key alias: keyalias
+Key password: CJgPAZWyj94ziSU5
